@@ -4,10 +4,10 @@ import PeopleComponent from './people.component';
 import SpendComponent from './spend.component';
 import TotalComponent from './total.component';
 
-function TabComponent() {
+function TabComponent(): JSX.Element{
     return (
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-            <Tab eventKey="people" title="Pessoas">
+            <Tab eventKey="people" title="Pessoas" active>
                 <PeopleComponent />
             </Tab>
             <Tab eventKey="spend" title="Gastos">
