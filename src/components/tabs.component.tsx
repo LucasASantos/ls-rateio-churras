@@ -7,7 +7,7 @@ import TotalComponent from './total.component';
 function TabComponent(): JSX.Element{
     return (
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-            <Tab eventKey="people" title="Pessoas" active>
+            <Tab eventKey="people" title="Pessoas">
                 <PeopleComponent />
             </Tab>
             <Tab eventKey="spend" title="Gastos">
