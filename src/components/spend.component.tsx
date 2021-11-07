@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 
 import React, { Component } from 'react';
-import { Button, Form, FormControl, InputGroup, Table } from 'react-bootstrap';
+import { Button, Form, FormControl, InputGroup, Table, Row, Col } from 'react-bootstrap';
 import { BsTrash, BsPencil } from "react-icons/bs";
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
@@ -59,7 +59,7 @@ class SpendComponent extends Component<SpendProps, State>{
     }
 
     console.log('aqui', person);
-    
+
 
     return {
       state: spends,
@@ -79,24 +79,32 @@ class SpendComponent extends Component<SpendProps, State>{
   }
 
   render() {
-    const { peoples, spends, createSpendRequest} = this.props;
+    const { peoples, spends, createSpendRequest } = this.props;
     return (
       <div className="spend-component">
-        <h3>Cadastre uma compra que foi efetuada no role</h3>
+        <h3>Cadastre um gasto</h3>
+        <p>Aqui você vai cadastrar a os valores que foram gastos no rolê e quem pagou</p>
 
-        <InputGroup className="mb-3">
-          <InputGroup.Text>R$</InputGroup.Text>
-          <FormControl aria-label="Dollar amount (with dot and two decimal places)" type="number" placeholder="Valor" onChange={this.updateValue} />
-        </InputGroup>
+        <Row className="justify-content-md-center">
+          <Col lg="2">
+            <InputGroup className="mb-3">
+              <InputGroup.Text>R$</InputGroup.Text>
+              <FormControl aria-label="Dollar amount (with dot and two decimal places)" type="number" placeholder="Valor" onChange={this.updateValue} />
+            </InputGroup>
+          </Col>
+          <Col lg="3">
+            <Form.Select onChange={this.updatePeople}>
+              <option value="null">Quem pagou</option>
+              {peoples.map(people => (<option key={people.id} value={people.id}>{people.name}</option>))}
+            </Form.Select>
+          </Col>
+          <Col lg="1">
 
-        <Form.Select onChange={this.updatePeople}>
-          <option value="null">Quem pagou</option>
-          {peoples.map(people => (<option key={people.id} value={people.id}>{people.name}</option>))}
-        </Form.Select>
-
-        <Button variant="outline-primary" onClick={() => createSpendRequest(this.handleDataRequest())}>Salvar</Button>{' '}
-
-        <Table striped bordered hover>
+            <Button variant="outline-dark" onClick={() => createSpendRequest(this.handleDataRequest())}>Salvar</Button>{' '}
+          </Col>
+        </Row>
+        <hr />
+        <Table striped bordered hover variant="dark">
           <thead>
             <tr>
               <th>Nome</th>

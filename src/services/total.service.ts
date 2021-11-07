@@ -24,7 +24,7 @@ function addNewSpend(totalState: Total[], spend: Spend) :Total[] {
         return totalState;
     }
 
-    total.spendValue = spend.value;
+    total.spendValue += spend.value;
 
     return calcTotalSpend(totalState);
 }

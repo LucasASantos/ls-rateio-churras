@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { Component } from 'react';
-import { Button, FormControl, InputGroup, Table } from 'react-bootstrap';
+import { Button, Form, FormControl, InputGroup, Row, Table, Col } from 'react-bootstrap';
 import { BsTrash, BsPencil } from "react-icons/bs";
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
@@ -51,23 +51,32 @@ class PeopleComponent extends Component<Props, State>{
     render() {
 
         const { peoples, createPeopleRequest } = this.props;
-        const {name} = this.state;
+        const { name } = this.state;
 
 
         return (
             <div className="people-component">
-                <h3>Cadastre uma pessoa que vai participar da divisão</h3>
-                <InputGroup >
-                    <InputGroup.Text id="inputGroup-sizing-lg">Nome</InputGroup.Text>
-                    <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" onChange={this.updateName} />
-                </InputGroup>
 
-                <Button onClick={() => createPeopleRequest({ state: peoples, data: new People(name) })} variant="outline-primary">Salvar</Button>{' '}
+                <h3>Cadastre uma pessoa</h3>
+                <p> Aqui você vai cadastrar uma pessoa que vai participar da divisão do churras.</p>
 
-                <Table striped bordered hover>
+                <Row className="justify-content-md-center">
+                    <Col lg="5">
+
+                        <InputGroup >
+                            <InputGroup.Text id="inputGroup-sizing-lg">Nome</InputGroup.Text>
+                            <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" onChange={this.updateName} />
+                        </InputGroup>
+                    </Col>
+
+                    <Col lg="1">
+                        <Button onClick={() => createPeopleRequest({ state: peoples, data: new People(name) })} variant="outline-dark">Salvar</Button>{' '}
+                    </Col>
+                </Row>
+                <hr/>
+                <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>
-                            <th />
                             <th>Nome</th>
                             <th />
                         </tr>
@@ -75,7 +84,6 @@ class PeopleComponent extends Component<Props, State>{
                     <tbody>
                         {peoples.map(people => (
                             <tr key={people.id}>
-                                <td>{people.id}</td>
                                 <td>{people.name}</td>
                                 <td><BsPencil /><BsTrash /></td>
                             </tr>
