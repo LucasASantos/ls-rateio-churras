@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-unused-state */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { Component } from 'react';
 import { Button, FormControl, InputGroup, Table } from 'react-bootstrap';
@@ -54,6 +51,7 @@ class PeopleComponent extends Component<Props, State>{
     render() {
 
         const { peoples, createPeopleRequest } = this.props;
+        const {name} = this.state;
 
 
         return (
@@ -64,7 +62,7 @@ class PeopleComponent extends Component<Props, State>{
                     <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" onChange={this.updateName} />
                 </InputGroup>
 
-                <Button onClick={() => createPeopleRequest({ state: peoples, data: new People(this.state.name) })} variant="outline-primary">Salvar</Button>{' '}
+                <Button onClick={() => createPeopleRequest({ state: peoples, data: new People(name) })} variant="outline-primary">Salvar</Button>{' '}
 
                 <Table striped bordered hover>
                     <thead>
@@ -92,13 +90,6 @@ class PeopleComponent extends Component<Props, State>{
 const mapStateToProps = (state: ApplicationState) => ({
     peoples: state.people.data
 });
-
-// function mapStateToProps(state:ApplicationState) {
-//     console.log(state)
-//     return {
-//         peoples: state.people.data
-//     };
-// }
 
 const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators(Actions, dispatch);
 

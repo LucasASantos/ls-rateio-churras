@@ -1,7 +1,5 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable @typescript-eslint/no-redeclare */
-/* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable jsx-a11y/control-has-associated-label */
+
 import React, { Component } from 'react';
 import { Button, Form, FormControl, InputGroup, Table } from 'react-bootstrap';
 import { BsTrash, BsPencil } from "react-icons/bs";
@@ -50,11 +48,10 @@ class SpendComponent extends Component<SpendProps, State>{
 
 
   handleDataRequest() {
-    console.log('aquiii');
-    
     const { peoples, spends } = this.props;
+    const { peopleId, value } = this.state;
 
-    const person = peoples.find(p => p.id === this.state.peopleId);
+    const person = peoples.find(p => p.id === peopleId);
 
     if (!person) {
       console.log('erro pessoa null');
@@ -68,7 +65,7 @@ class SpendComponent extends Component<SpendProps, State>{
       state: spends,
       data: new Spend(
         person,
-        this.state.value
+        value
       )
     }
   }
@@ -86,8 +83,6 @@ class SpendComponent extends Component<SpendProps, State>{
     return (
       <div className="spend-component">
         <h3>Cadastre uma compra que foi efetuada no role</h3>
-        <p>{this.state.value}</p>
-        <p>{this.state.peopleId}</p>
 
         <InputGroup className="mb-3">
           <InputGroup.Text>R$</InputGroup.Text>
