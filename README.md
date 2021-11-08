@@ -13,7 +13,7 @@ Para rodar o projeto siga esses passos:
 Instale o Node.JS na sua máquina seguindo a documentação do projeto no link: [Node](https://nodejs.org/en/download/)
 
 ### Yarn(ou npm)
-Instale o yarn na sua maquina de maneira global seguindo as orientações da documentação
+Instale o yarn na sua maquina de maneira global seguindo as orientações da [documentação](https://yarnpkg.com/)
 
 *no caso de utilização do npm apenas pule esse passo
 
