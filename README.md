@@ -1,8 +1,8 @@
-# Palestra typescript inicio prático
+# Palestra typescript início prático
 
 ## Objetivo
 
-O objetivo deste projeto é trazer uma experiencia de contribuição em um projeto real que utiliza a linguagen **Typescript** para os alunos do Bootcamp de **Take Blip Fullstack Developer #2** que foi disponibilizado pela [Take Blip](https://github.com/takenet). 
+O objetivo deste projeto é trazer uma experiência de contribuição em um projeto real que utiliza a linguagem **Typescript** para os alunos do Bootcamp de **Take Blip Fullstack Developer #2** que foi disponibilizado pela [Take Blip](https://github.com/takenet). 
 
 Com o intuito de levar conhecimento de qualidade a comunidade, o Bootcamp disponibilizou 130 mil bolsas, além de fornecer palestras/mentorias com profissionais da Take Blip.
 
@@ -10,7 +10,7 @@ Com o intuito de levar conhecimento de qualidade a comunidade, o Bootcamp dispon
 
 Para rodar o projeto siga esses passos: 
 ### Node.Js
-Instale o Node.JS na sua maquina seguindo a documentação do projeto no link: [Node](https://nodejs.org/en/download/)
+Instale o Node.JS na sua máquina seguindo a documentação do projeto no link: [Node](https://nodejs.org/en/download/)
 
 ### Yarn(ou npm)
 Instale o yarn na sua maquina de maneira global seguindo as orientações da documentação
