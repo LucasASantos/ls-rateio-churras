@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 
 import React, { Component } from 'react';
@@ -48,7 +49,7 @@ class SpendComponent extends Component<SpendProps, State>{
 
 
   handleDataRequest() {
-    const { peoples, spends } = this.props;
+    const { peoples } = this.props;
     const { peopleId, value } = this.state;
 
     const person = peoples.find(p => p.id === peopleId);
@@ -58,11 +59,11 @@ class SpendComponent extends Component<SpendProps, State>{
       throw Error();
     }
 
-    console.log('aqui', person);
+    console.log('aqui', this.props);
 
 
     return {
-      state: spends,
+      state: this.props.spends,
       data: new Spend(
         person,
         value
@@ -83,7 +84,7 @@ class SpendComponent extends Component<SpendProps, State>{
     return (
       <div className="spend-component">
         <h3>Cadastre um gasto</h3>
-        <p>Aqui você vai cadastrar a os valores que foram gastos no rolê e quem pagou</p>
+        <p>Aqui você vai cadastrar os valores que foram gastos no rolê e quem pagou.</p>
 
         <Row className="justify-content-md-center">
           <Col lg="2">

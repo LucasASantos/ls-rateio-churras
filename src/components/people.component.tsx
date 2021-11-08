@@ -9,7 +9,7 @@ import { People } from '../models/people.model';
 import { ApplicationState, Actions } from '../store';
 
 interface StateProps {
-    peoples: People[]
+    peoples: People[],
 }
 
 interface State {
@@ -50,9 +50,8 @@ class PeopleComponent extends Component<Props, State>{
 
     render() {
 
-        const { peoples, createPeopleRequest } = this.props;
+        const { peoples, createPeopleRequest, } = this.props;
         const { name } = this.state;
-
 
         return (
             <div className="people-component">

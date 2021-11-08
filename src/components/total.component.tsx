@@ -5,6 +5,7 @@ import { Accordion, Row, Table } from 'react-bootstrap';
 import { BsPencil, BsTrash } from 'react-icons/bs';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
+import  SummaryComponent from './summary.component';
 import { Total } from '../models/total.model';
 import { Actions, ApplicationState } from '../store';
 
@@ -38,12 +39,15 @@ class TotalComponent extends Component<TotalStateProps>{
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
+
+        <SummaryComponent />
         <hr />
         <Table striped bordered hover variant="dark">
           <thead>
             <tr>
               <th>Nome</th>
               <th>Valor do gasto</th>
+              <th>Vai restituir</th>
               <th>Valor total</th>
             </tr>
           </thead>
@@ -52,6 +56,7 @@ class TotalComponent extends Component<TotalStateProps>{
               <tr key={item.id}>
                 <td>{item.people.name}</td>
                 <td>{item.spendValue}</td>
+                <td>{item.isRecive}</td>
                 <td>{item.totalValue}</td>
               </tr>
             ))}
