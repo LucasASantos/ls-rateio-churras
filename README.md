@@ -15,16 +15,16 @@ Instale o Node.JS na sua máquina seguindo a documentação do projeto no link: 
 ### Yarn(ou npm)
 Instale o yarn na sua maquina de maneira global seguindo as orientações da [documentação](https://yarnpkg.com/)
 
-*no caso de utilização do npm apenas pule esse passo
+*no caso de utilização do **npm** apenas pule esse passo
 
-### instalando as dependências 
+### Instalando as dependências 
 
 ` yarn `
 ou  `npm i`
 
 ### Rodando o programa
 
-` yarn starn `
+` yarn start `
 ou  `npm start`
 
 ## Estrutura do projeto
