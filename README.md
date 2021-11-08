@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Palestra typescript inicio prático
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objetivo
 
-## Available Scripts
+O objetivo deste projeto é trazer uma experiencia de contribuição em um projeto real que utiliza a linguagen **Typescript** para os alunos do Bootcamp de **Take Blip Fullstack Developer #2** que foi disponibilizado pela [Take Blip](https://github.com/takenet). 
 
-In the project directory, you can run:
+Com o intuito de levar conhecimento de qualidade a comunidade, o Bootcamp disponibilizou 130 mil bolsas, além de fornecer palestras/mentorias com profissionais da Take Blip.
 
-### `yarn start`
+## Rodando o projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para rodar o projeto siga esses passos: 
+### Node.Js
+Instale o Node.JS na sua maquina seguindo a documentação do projeto no link: [Node](https://nodejs.org/en/download/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Yarn(ou npm)
+Instale o yarn na sua maquina de maneira global seguindo as orientações da documentação
 
-### `yarn test`
+*no caso de utilização do npm apenas pule esse passo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### instalando as dependências 
 
-### `yarn build`
+` yarn `
+ou  `npm i`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Rodando o programa
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+` yarn starn `
+ou  `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Estrutura do projeto
+* src -> Raiz do Projeto
+* src/components -> Todos os componentes do projeto
+* src/models -> Todos os modelos de dados do sistema
+* src/services -> Todos os serviços que fazem manipulação nos dados do sistema
+* src/store -> Todos os arquivos que fazem manipulação do estado da aplicação utilizando o padrão "Ducks"
 
-### `yarn eject`
+## Stack
+O projeto foi desenvolvido em React utilizando o Typescript como linguagem de desenvolvimento, além do framework base também foi utilizado Redux para controle do estado da aplicação.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Utilização
+Contribuições são bem vindas. Todos podem clonar e utilizar esse projeto de forma não comercial. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Em caso de utilização os créditos são bem vindos!
+## Aprenda mais
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Você pode aprender mais lendo a documentação [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started) e [React documentation](https://reactjs.org/).
